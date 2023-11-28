@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/pages/f&b/bakery_page.dart';
+import 'package:food_order/pages/f&b/beverage_page.dart';
+import 'package:food_order/pages/f&b/chicken_page.dart';
+import 'package:food_order/pages/f&b/noodle_page.dart';
+import 'package:food_order/pages/f&b/other_page.dart';
+import 'package:food_order/pages/f&b/rice_page.dart';
+import 'package:food_order/pages/f&b/sidedish_page.dart';
+import 'package:food_order/pages/f&b/soup_page.dart';
 import 'package:food_order/widgets/custom_card.dart';
 import 'package:food_order/widgets/custom_favorite.dart';
 import 'package:food_order/widgets/drawer.dart';
@@ -33,116 +41,241 @@ class MainPage extends StatelessWidget {
                 ),
 
                 // Category
-                const Padding(
-                  padding: EdgeInsets.only(left: 20),
-                  child: Column(
-                    children: [
-                      // Category baris 1
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                Column(
+                  children: [
+                    // Category baris 1
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const RicePage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Rice",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Rice"),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 25,
-                          ),
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const NoodlePage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Noodle",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Noodle"),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 25,
-                          ),
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const SoupPage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Soup",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Soup"),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 25,
-                          ),
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const ChickenPage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Chicken",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Chicken"),
-                            ],
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 39,
-                      ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 39,
+                    ),
 
-                      // Category baris 2
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                    // Category baris 2
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const BakeryPage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Bakery",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Bakery"),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 25,
-                          ),
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const SideDishPage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Side Dish",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Side Dish"),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 25,
-                          ),
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const BeveragePage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Beverages",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Beverages"),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 25,
-                          ),
-                          Column(
-                            children: [
-                              CustomCard(),
-                              SizedBox(
-                                height: 9,
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const OtherPage(),
+                                    ));
+                              },
+                              child: Column(
+                                children: [
+                                  const CustomCard(),
+                                  const SizedBox(
+                                    height: 9,
+                                  ),
+                                  Text(
+                                    "Others",
+                                    style: GoogleFonts.leagueSpartan(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ],
                               ),
-                              Text("Others"),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 33,
