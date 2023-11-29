@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/widgets/custom_judul.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AboutUsCard extends StatelessWidget {
@@ -51,10 +52,12 @@ class AboutUsCard extends StatelessWidget {
                 style: GoogleFonts.leagueSpartan(
                     fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              Text(
-                "Taste Food. \nTaste Good.",
-                style: GoogleFonts.leagueSpartan(
-                    fontSize: 40, fontWeight: FontWeight.bold),
+              const SizedBox(
+                height: 8,
+              ),
+              const Judul(),
+              const SizedBox(
+                height: 8,
               ),
               Text(
                 "We're all about\ndelicious food and a\nextraordinary dining\nexperience.",

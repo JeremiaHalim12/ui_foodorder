@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomFavorite extends StatelessWidget {
-  const CustomFavorite({super.key});
+  final String name;
+  const CustomFavorite({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +33,36 @@ class CustomFavorite extends StatelessWidget {
               color: Colors.white, borderRadius: BorderRadius.circular(8)),
         ),
         Positioned(
-          bottom: 50,
-          child: Text(
-            "Favorites",
-            style: GoogleFonts.badScript(fontSize: 22, fontWeight: FontWeight.w600),
-          ),
-        ),
+            bottom: 50,
+            child: Stack(
+              children: <Widget>[
+                // outline stroke.
+                Text(
+                  name,
+                  style: GoogleFonts.badScript(
+                      fontSize: 22,
+                      foreground: Paint()
+                        ..style = PaintingStyle.stroke
+                        ..strokeWidth = 2
+                        ..color = const Color(0xFFFF0000),
+                      shadows: const [
+                        BoxShadow(
+                            color: Color(0xFF000000),
+                            blurRadius: 0,
+                            offset: Offset(1, 2),
+                            spreadRadius: 0)
+                      ]),
+                ),
+                // fill.
+                Text(
+                  name,
+                  style: GoogleFonts.badScript(
+                    fontSize: 22,
+                    color: const Color(0xFFFFCF54),
+                  ),
+                ),
+              ],
+            )),
       ],
     );
   }

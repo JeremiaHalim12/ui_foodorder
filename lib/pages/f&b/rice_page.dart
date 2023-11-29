@@ -8,7 +8,9 @@ class RicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(appBar: AppBar(
+      child: Scaffold(
+        backgroundColor: Color(0xFFFFE1CC),
+        appBar: AppBar(
           centerTitle: true,
           title: Text(
             "Rice",
@@ -19,12 +21,13 @@ class RicePage extends StatelessWidget {
             ),
           ),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xFFFFE1CC),
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
             child: BackIcon(),
           ),
-        ),),
+        ),
+      ),
     );
   }
 }

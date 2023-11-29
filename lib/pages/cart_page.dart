@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/widgets/back_icon.dart';
-import 'package:food_order/widgets/howto_card.dart';
+import 'package:food_order/widgets/custom_bottomnavbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HowToPage extends StatelessWidget {
-  const HowToPage({super.key});
+class CartPage extends StatelessWidget {
+  const CartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFFFE1CC),
+        backgroundColor: const Color(0xFFFFE1CC),
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "How to Order",
+            "Cart",
             style: GoogleFonts.leagueSpartan(
               fontSize: 28,
               fontWeight: FontWeight.bold,
@@ -22,24 +22,14 @@ class HowToPage extends StatelessWidget {
             ),
           ),
           elevation: 0,
-          backgroundColor: Color(0xFFFFE1CC),
+          backgroundColor: const Color(0xFFFFE1CC),
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
             child: BackIcon(),
           ),
         ),
-        body: const Padding(
-            padding: EdgeInsets.all(20),
-            child: Center(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 51,
-                  ),
-                  HowToCard(),
-                ],
-              ),
-            )),
+        // body: const Center(),
+        bottomNavigationBar: const CustomNavbar(),
       ),
     );
   }

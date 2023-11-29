@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/pages/aboutus_page.dart';
 import 'package:food_order/pages/howto_page.dart';
+import 'package:food_order/widgets/custom_judul.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -30,13 +31,9 @@ class CustomDrawer extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 11),
-                    child: Text(
-                      "Taste Food. \nTaste Good.",
-                      style: GoogleFonts.leagueSpartan(
-                          fontSize: 40, fontWeight: FontWeight.bold),
-                    ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 11),
+                    child: Judul()
                   ),
                 ],
               ),

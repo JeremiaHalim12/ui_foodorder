@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({super.key});
+  final String gambar;
+  final double paddingtop;
+  final double paddingright;
+  final double paddingleft;
+  const CustomCard({super.key, required this.gambar, required this.paddingtop, required this.paddingright, required this.paddingleft});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +33,12 @@ class CustomCard extends StatelessWidget {
           height: 56,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(8)),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: paddingtop, right: paddingright, left: paddingleft),
+          child: Image(
+            image: AssetImage(gambar),
+          ),
         ),
       ],
     );

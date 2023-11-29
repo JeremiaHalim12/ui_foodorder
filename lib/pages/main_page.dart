@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_order/pages/f&b/bakery_page.dart';
-import 'package:food_order/pages/f&b/beverage_page.dart';
-import 'package:food_order/pages/f&b/chicken_page.dart';
-import 'package:food_order/pages/f&b/noodle_page.dart';
-import 'package:food_order/pages/f&b/other_page.dart';
-import 'package:food_order/pages/f&b/rice_page.dart';
-import 'package:food_order/pages/f&b/sidedish_page.dart';
-import 'package:food_order/pages/f&b/soup_page.dart';
-import 'package:food_order/widgets/custom_card.dart';
-import 'package:food_order/widgets/custom_favorite.dart';
+import 'package:food_order/widgets/category_column.dart';
+import 'package:food_order/widgets/custom_bottomnavbar.dart';
+import 'package:food_order/widgets/custom_judul.dart';
+import 'package:food_order/widgets/custom_judulfav.dart';
 import 'package:food_order/widgets/drawer.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:food_order/widgets/favorites.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -19,287 +13,57 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+          backgroundColor: const Color(0xFFFFE1CC),
           appBar: AppBar(
             title: const Text(""),
             backgroundColor: Colors.transparent,
             elevation: 0,
             iconTheme: const IconThemeData(color: Colors.black),
+            leading: Builder(builder: (context) {
+              return IconButton(
+                icon: const Icon(
+                  Icons.menu_rounded,
+                  size: 40,
+                ),
+                padding: const EdgeInsets.only(left: 11, top: 11),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              );
+            }),
           ),
           drawer: const CustomDrawer(),
-          body: Padding(
-            padding: const EdgeInsets.all(20),
+          body: const Padding(
+            padding: EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  "Taste Food. \nTaste Good.",
-                  style: GoogleFonts.leagueSpartan(
-                      fontSize: 40, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 36,
+                Judul(),
+                SizedBox(
+                  height: 23,
                 ),
 
                 // Category
-                Column(
-                  children: [
-                    // Category baris 1
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const RicePage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Rice",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const NoodlePage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Noodle",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const SoupPage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Soup",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const ChickenPage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Chicken",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 39,
-                    ),
-
-                    // Category baris 2
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const BakeryPage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Bakery",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const SideDishPage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Side Dish",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const BeveragePage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Beverages",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const OtherPage(),
-                                    ));
-                              },
-                              child: Column(
-                                children: [
-                                  const CustomCard(),
-                                  const SizedBox(
-                                    height: 9,
-                                  ),
-                                  Text(
-                                    "Others",
-                                    style: GoogleFonts.leagueSpartan(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(
+                CategoryColumn(),
+                SizedBox(
                   height: 33,
                 ),
-                Text(
-                  "Favorites",
-                  style: GoogleFonts.leagueSpartan(
-                      fontSize: 40, fontWeight: FontWeight.bold),
+
+                // Favorite
+                JudulFav(),
+                SizedBox(
+                  height: 10,
                 ),
-                const SizedBox(
-                  height: 21,
-                ),
-                const Row(
-                  children: [
-                    CustomFavorite(),
-                    SizedBox(
-                      width: 21,
-                    ),
-                    CustomFavorite(),
-                  ],
+                SingleChildScrollView(
+                  
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 7),
+                    child: FavoritesRow(),
+                  ),
                 )
               ],
             ),
-          )),
+          ),
+          bottomNavigationBar: const CustomNavbar()),
     );
   }
 }
