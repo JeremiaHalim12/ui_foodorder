@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/widgets/back_icon_pop.dart';
-import 'package:food_order/widgets/howto_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HowToPage extends StatelessWidget {
-  const HowToPage({super.key});
+class BeefPage extends StatelessWidget {
+  const BeefPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class HowToPage extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "How to Order",
+            "Beef",
             style: GoogleFonts.leagueSpartan(
               fontSize: 28,
               fontWeight: FontWeight.bold,
@@ -28,18 +27,6 @@ class HowToPage extends StatelessWidget {
             child: BackIconPop(),
           ),
         ),
-        body: const Padding(
-            padding: EdgeInsets.all(20),
-            child: Center(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 51,
-                  ),
-                  HowToCard(),
-                ],
-              ),
-            )),
       ),
     );
   }

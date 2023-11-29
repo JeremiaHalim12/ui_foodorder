@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_order/widgets/back_icon.dart';
+import 'package:food_order/pages/main_page.dart';
+import 'package:food_order/widgets/back_icon_push.dart';
 import 'package:food_order/widgets/custom_bottomnavbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,7 +26,7 @@ class CartPage extends StatelessWidget {
           backgroundColor: const Color(0xFFFFE1CC),
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
-            child: BackIcon(),
+            child: BackIconPush(page: MainPage(),),
           ),
         ),
         // body: const Center(),

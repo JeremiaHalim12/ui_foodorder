@@ -15,7 +15,6 @@ class MainPage extends StatelessWidget {
       child: Scaffold(
           backgroundColor: const Color(0xFFFFE1CC),
           appBar: AppBar(
-            title: const Text(""),
             backgroundColor: Colors.transparent,
             elevation: 0,
             iconTheme: const IconThemeData(color: Colors.black),

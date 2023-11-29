@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_order/widgets/back_icon.dart';
+import 'package:food_order/widgets/back_icon_pop.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SideDishPage extends StatelessWidget {
@@ -9,7 +9,7 @@ class SideDishPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFFFE1CC),
+        backgroundColor: const Color(0xFFFFE1CC),
         appBar: AppBar(
           centerTitle: true,
           title: Text(
@@ -21,10 +21,10 @@ class SideDishPage extends StatelessWidget {
             ),
           ),
           elevation: 0,
-          backgroundColor: Color(0xFFFFE1CC),
+          backgroundColor: const Color(0xFFFFE1CC),
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
-            child: BackIcon(),
+            child: BackIconPop(),
           ),
         ),
       ),

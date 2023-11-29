@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_order/pages/main_page.dart';
 
-class BackIcon extends StatelessWidget {
-  const BackIcon({super.key});
+class BackIconPush extends StatelessWidget {
+  final Widget page;
+  const BackIconPush({super.key, required this.page});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class BackIcon extends StatelessWidget {
           padding: const EdgeInsets.only(right: 2),
           child: IconButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const MainPage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => page));
             },
             icon: const Icon(
               Icons.arrow_back_ios_new_rounded,

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:food_order/widgets/back_icon.dart';
+import 'package:food_order/widgets/back_icon_pop.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class OtherPage extends StatelessWidget {
-  const OtherPage({super.key});
+class SoftDrinkPage extends StatelessWidget {
+  const SoftDrinkPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFFFE1CC),
+        backgroundColor: const Color(0xFFFFE1CC),
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "Other",
+            "Soft Drink",
             style: GoogleFonts.leagueSpartan(
               fontSize: 28,
               fontWeight: FontWeight.bold,
@@ -21,10 +21,10 @@ class OtherPage extends StatelessWidget {
             ),
           ),
           elevation: 0,
-          backgroundColor: Color(0xFFFFE1CC),
+          backgroundColor: const Color(0xFFFFE1CC),
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
-            child: BackIcon(),
+            child: BackIconPop(),
           ),
         ),
       ),

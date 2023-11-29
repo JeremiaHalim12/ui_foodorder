@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/pages/f&b/all_menu_page.dart';
 import 'package:food_order/pages/f&b/bakery_page.dart';
 import 'package:food_order/pages/f&b/beverage_page.dart';
 import 'package:food_order/pages/f&b/chicken_page.dart';
 import 'package:food_order/pages/f&b/noodle_page.dart';
-import 'package:food_order/pages/f&b/other_page.dart';
 import 'package:food_order/pages/f&b/rice_page.dart';
 import 'package:food_order/pages/f&b/sidedish_page.dart';
 import 'package:food_order/pages/f&b/soup_page.dart';
@@ -255,7 +255,7 @@ class CategoryColumn extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const OtherPage(),
+                          builder: (context) => const AllMenuPage(),
                         ));
                   },
                   child: Column(
