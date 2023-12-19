@@ -9,20 +9,27 @@ class CustomAllMenuText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => page,
-              ));
-        },
-        child: Text(
-          text,
-          style: GoogleFonts.leagueSpartan(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
+      onPressed: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => page,
+            ));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text(
+            text,
+            style: GoogleFonts.leagueSpartan(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
           ),
-        ));
+          SizedBox(width: 200)
+        ],
+      ),
+    );
   }
 }

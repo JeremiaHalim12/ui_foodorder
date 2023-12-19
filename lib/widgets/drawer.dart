@@ -10,7 +10,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      width: 250,
+      width: 230,
       backgroundColor: const Color(0xFFFFD65C),
       child: ListView(
         children: <Widget>[
@@ -32,9 +32,7 @@ class CustomDrawer extends StatelessWidget {
                     height: 30,
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(left: 11),
-                    child: Judul()
-                  ),
+                      padding: EdgeInsets.only(left: 14), child: Judul(width: 207, height: 74,)),
                 ],
               ),
             ],
@@ -42,33 +40,39 @@ class CustomDrawer extends StatelessWidget {
           const SizedBox(
             height: 53,
           ),
-          ListTile(
-            title: Text(
-              'How to Order',
-              style: GoogleFonts.leagueSpartan(
-                  fontSize: 24, fontWeight: FontWeight.w600),
+          Padding(
+            padding: const EdgeInsets.only(left: 4),
+            child: ListTile(
+              title: Text(
+                'How to Order',
+                style: GoogleFonts.leagueSpartan(
+                    fontSize: 24, fontWeight: FontWeight.w600),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HowToPage(),
+                    ));
+              },
             ),
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HowToPage(),
-                  ));
-            },
           ),
-          ListTile(
-            title: Text(
-              "About Us",
-              style: GoogleFonts.leagueSpartan(
-                  fontSize: 24, fontWeight: FontWeight.w600),
+          Padding(
+            padding: const EdgeInsets.only(left: 4),
+            child: ListTile(
+              title: Text(
+                "About Us",
+                style: GoogleFonts.leagueSpartan(
+                    fontSize: 24, fontWeight: FontWeight.w600),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AboutUsPage(),
+                    ));
+              },
             ),
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const AboutUsPage(),
-                  ));
-            },
           )
         ],
       ),

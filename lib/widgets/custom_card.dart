@@ -20,19 +20,13 @@ class CustomCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             boxShadow: const [
               BoxShadow(
-                color: Color(0x99000000),
-                blurRadius: 4,
-                offset: Offset(2, 3),
+                color: Color.fromARGB(200, 255, 214, 92),
+                blurRadius: 7,
+                offset: Offset(0, 0),
                 spreadRadius: 0,
               ),
             ],
           ),
-        ),
-        Container(
-          width: 56,
-          height: 56,
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(8)),
         ),
         Padding(
           padding: EdgeInsets.only(top: paddingtop, right: paddingright, left: paddingleft),

@@ -10,19 +10,19 @@ class AboutUsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFFFFE1CC),
+        backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
-          title: Text(
-            "About Us",
-            style: GoogleFonts.leagueSpartan(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
+          title: Container(
+            width: 115,
+            height: 32,
+            child: const Image(
+              image: AssetImage("lib/asset/aboutus.png"),
+              fit: BoxFit.contain,
             ),
           ),
           elevation: 0,
-          backgroundColor: const Color(0xFFFFE1CC),
+          backgroundColor: Colors.white,
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
             child: BackIconPop(),

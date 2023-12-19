@@ -53,6 +53,7 @@ class AllMenuCard extends StatelessWidget {
           ),
         ),
         const Positioned(
+          left: 29,
           top: 30,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +70,10 @@ class AllMenuCard extends StatelessWidget {
               Garis(),
               CustomAllMenuText(text: "  Dessert", page: DessertPage(),),
               Garis(),
-              CustomAllMenuText(text: "Tea", page: TeaPage(),),
+              Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: CustomAllMenuText(text: "Tea", page: TeaPage(),),
+              ),
               Garis(),
               CustomAllMenuText(text: "  Coffee", page: CoffeePage(),),
               Garis(),

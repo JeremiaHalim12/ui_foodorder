@@ -10,7 +10,7 @@ class AllMenuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFFFFE1CC),
+        backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
           title: Text(
@@ -22,7 +22,7 @@ class AllMenuPage extends StatelessWidget {
             ),
           ),
           elevation: 0,
-          backgroundColor: const Color(0xFFFFE1CC),
+          backgroundColor: Colors.white,
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
             child: BackIconPop(),

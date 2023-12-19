@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/widgets/back_icon_pop.dart';
-import 'package:food_order/widgets/howto_card.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:food_order/widgets/payment_card.dart';
 
-class HowToPage extends StatelessWidget {
-  const HowToPage({super.key});
+class PaymentPage extends StatelessWidget {
+  const PaymentPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class HowToPage extends StatelessWidget {
             width: 165,
             height: 30,
             child: const Image(
-              image: AssetImage("lib/asset/howtoorder.png"),
+              image: AssetImage("lib/asset/payment.png"),
               fit: BoxFit.contain,
             ),
           ),
@@ -36,7 +35,7 @@ class HowToPage extends StatelessWidget {
                   SizedBox(
                     height: 51,
                   ),
-                  HowToCard(),
+                  PaymentCard(),
                 ],
               ),
             )),

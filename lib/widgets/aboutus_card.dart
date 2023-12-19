@@ -55,7 +55,7 @@ class AboutUsCard extends StatelessWidget {
               const SizedBox(
                 height: 8,
               ),
-              const Judul(),
+              const Judul(width: 207, height: 74,),
               const SizedBox(
                 height: 8,
               ),

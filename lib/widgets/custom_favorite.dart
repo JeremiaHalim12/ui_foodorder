@@ -14,51 +14,29 @@ class CustomFavorite extends StatelessWidget {
           width: 212,
           height: 282,
           decoration: BoxDecoration(
-            color: const Color(0xFFFFD65C),
+            color: Color.fromARGB(255, 255, 165, 100),
             borderRadius: BorderRadius.circular(8),
             boxShadow: const [
               BoxShadow(
-                color: Color(0x99000000),
-                blurRadius: 4,
-                offset: Offset(2, 3),
+                color: Color.fromARGB(178, 255, 165, 100),
+                blurRadius: 6,
+                offset: Offset(0, 0),
                 spreadRadius: 0,
               ),
             ],
           ),
         ),
-        Container(
-          width: 206,
-          height: 276,
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(8)),
-        ),
         Positioned(
             bottom: 50,
             child: Stack(
               children: <Widget>[
-                // outline stroke.
-                Text(
-                  name,
-                  style: GoogleFonts.badScript(
-                      fontSize: 22,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 2
-                        ..color = const Color(0xFFFF0000),
-                      shadows: const [
-                        BoxShadow(
-                            color: Color(0xFF000000),
-                            blurRadius: 0,
-                            offset: Offset(1, 2),
-                            spreadRadius: 0)
-                      ]),
-                ),
                 // fill.
                 Text(
                   name,
-                  style: GoogleFonts.badScript(
+                  style: GoogleFonts.leagueSpartan(
+                    fontWeight: FontWeight.w600,
                     fontSize: 22,
-                    color: const Color(0xFFFFCF54),
+                    color: Colors.white,
                   ),
                 ),
               ],

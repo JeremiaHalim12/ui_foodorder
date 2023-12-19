@@ -12,13 +12,9 @@ class BackIconPush extends StatelessWidget {
         Container(
           width: 35,
           height: 35,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: const Color(0xFFFFD65C),
-            border: Border.all(
-              width: 0.6,
-              color: Colors.black,
-            ),
+            color: Color(0xFFFFD65C),
           ),
         ),
         Padding(

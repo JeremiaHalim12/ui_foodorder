@@ -45,7 +45,9 @@ class CategoryColumn extends StatelessWidget {
                       Text(
                         "Rice",
                         style: GoogleFonts.leagueSpartan(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ],
                   ),
