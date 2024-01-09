@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/widgets/back_icon_pop.dart';
+import 'package:food_order/widgets/custom_menu.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BakeryPage extends StatelessWidget {
@@ -25,6 +26,64 @@ class BakeryPage extends StatelessWidget {
           leading: const Padding(
             padding: EdgeInsets.only(left: 11),
             child: BackIconPop(),
+          ),
+        ),
+        body: Center(
+          child: ListView(
+            children: const [
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+              CustomMenu(
+                  name: "Chicken Fried Rice",
+                  price: "Rp 25.000",
+                  gambar: "lib/asset/steak.png"),
+            ],
           ),
         ),
       ),

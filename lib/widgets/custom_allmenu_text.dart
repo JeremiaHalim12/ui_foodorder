@@ -27,7 +27,7 @@ class CustomAllMenuText extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          SizedBox(width: 200)
+          const SizedBox(width: 200)
         ],
       ),
     );

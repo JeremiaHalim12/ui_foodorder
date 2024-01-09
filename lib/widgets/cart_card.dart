@@ -61,9 +61,11 @@ class ItemCartCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(
-                        Icons.circle,
-                        size: 60,
+                      Image(
+                        image: AssetImage("lib/asset/steak.png"),
+                        fit: BoxFit.contain,
+                        width: 55,
+                        height: 55,
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 4),
@@ -84,9 +86,11 @@ class ItemCartCard extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(
-                        Icons.circle,
-                        size: 60,
+                      Image(
+                        image: AssetImage("lib/asset/juice.png"),
+                        fit: BoxFit.contain,
+                        width: 55,
+                        height: 55,
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 4),
@@ -107,9 +111,11 @@ class ItemCartCard extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(
-                        Icons.circle,
-                        size: 60,
+                      Image(
+                        image: AssetImage("lib/asset/friednoodle.png"),
+                        fit: BoxFit.contain,
+                        width: 55,
+                        height: 55,
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 4),

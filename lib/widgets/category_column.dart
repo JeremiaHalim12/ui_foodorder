@@ -10,6 +10,10 @@ import 'package:food_order/pages/f&b/soup_page.dart';
 import 'package:food_order/widgets/custom_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ukuran asset samain
+// icon kecilin
+// ukuran text sudah aman
+
 class CategoryColumn extends StatelessWidget {
   const CategoryColumn({super.key});
 
@@ -35,9 +39,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/rice.png",
-                        paddingleft: 15,
-                        paddingright: 0,
-                        paddingtop: 7,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,
@@ -68,9 +71,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/noodle.png",
-                        paddingleft: 12,
-                        paddingright: 0,
-                        paddingtop: 11,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,
@@ -99,9 +101,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/soup.png",
-                        paddingleft: 12,
-                        paddingright: 0,
-                        paddingtop: 8,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,
@@ -130,9 +131,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/chicken.png",
-                        paddingleft: 8,
-                        paddingright: 0,
-                        paddingtop: 14,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,
@@ -171,9 +171,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/bakery.png",
-                        paddingleft: 10,
-                        paddingright: 0,
-                        paddingtop: 8,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,
@@ -202,9 +201,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/sidedish.png",
-                        paddingleft: 10,
-                        paddingright: 0,
-                        paddingtop: 10,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,
@@ -233,9 +231,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/beverages.png",
-                        paddingleft: 16,
-                        paddingright: 0,
-                        paddingtop: 6,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,
@@ -264,9 +261,8 @@ class CategoryColumn extends StatelessWidget {
                     children: [
                       const CustomCard(
                         gambar: "lib/asset/other.png",
-                        paddingleft: 12,
-                        paddingright: 0,
-                        paddingtop: 12,
+                        paddingLeft: 4,
+                        paddingTop: 4,
                       ),
                       const SizedBox(
                         height: 9,

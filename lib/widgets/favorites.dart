@@ -9,31 +9,41 @@ class FavoritesRow extends StatelessWidget {
     return const Row(
       children: [
         CustomFavorite(
-          name: "Chicken Fried Rice",
-        ),
-        SizedBox(
-          width: 21,
-        ),
-        CustomFavorite(
-          name: "Nasi Padang",
-        ),
-        SizedBox(
-          width: 21,
-        ),
-        CustomFavorite(
-          name: "Beef Rice Bowl",
+          name: "Fried Chicken",
+          price: "Rp 20.000",
+          gambar: "lib/asset/friedchicken.png",
         ),
         SizedBox(
           width: 21,
         ),
         CustomFavorite(
           name: "Tenderloin Steak",
+          price: "Rp 90.000",
+          gambar: "lib/asset/steak.png",
         ),
         SizedBox(
           width: 21,
         ),
         CustomFavorite(
-          name: "Beef Blackpepper",
+          name: "Beef Rice Bowl",
+          price: "Rp 35.000",
+          gambar: "lib/asset/friednoodle.png",
+        ),
+        SizedBox(
+          width: 21,
+        ),
+        CustomFavorite(
+          name: "Sirloin Steak",
+          price: "Rp 80.000",
+          gambar: "lib/asset/steak.png",
+        ),
+        SizedBox(
+          width: 21,
+        ),
+        CustomFavorite(
+          name: "Orange Juice",
+          price: "Rp 35.000",
+          gambar: "lib/asset/juice.png",
         ),
       ],
     );

@@ -6,8 +6,8 @@ class JudulFav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 162,
-      height: 37,
+      width: 129,
+      height: 29,
       // padding: const EdgeInsets.all(3),
       child: const Image(
         image: AssetImage("lib/asset/Favorites.png"),

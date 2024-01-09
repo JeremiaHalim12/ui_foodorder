@@ -1,9 +1,17 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomFavorite extends StatelessWidget {
+  final String gambar;
   final String name;
-  const CustomFavorite({super.key, required this.name});
+  final String price;
+  const CustomFavorite(
+      {super.key,
+      required this.name,
+      required this.price,
+      required this.gambar});
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +35,35 @@ class CustomFavorite extends StatelessWidget {
           ),
         ),
         Positioned(
-            bottom: 50,
-            child: Stack(
+            bottom: 15,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                // fill.
+                Image(
+                  image: AssetImage(gambar),
+                  fit: BoxFit.contain,
+                  width: 175,
+                  height: 175,
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
                 Text(
                   name,
                   style: GoogleFonts.leagueSpartan(
                     fontWeight: FontWeight.w600,
-                    fontSize: 22,
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  price,
+                  style: GoogleFonts.leagueSpartan(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
